@@ -18,4 +18,3 @@
 //= require assan.custom
 //= require jquery.gmap.min
 //= require_tree .
-
