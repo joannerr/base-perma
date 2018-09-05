@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get 'home/index'
-  root to: "home#index"
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+	root to: "home#index"
+
+	resources :charges, only: [:don, :create, :thanks]
+	get '/don', to: 'charges#donation'
+	post '/don', to: 'charges#create'
 end
